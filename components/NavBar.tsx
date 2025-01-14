@@ -6,7 +6,7 @@ import Logo from "@/public/Logo.svg";
 export default function NavBar() {
   return (
     <header className="m-8 flex items-center justify-center px-6 py-4">
-      <div className="absolute left-0 px-4">
+      <div className="hidden sm:block absolute left-0 px-4">
         <Image src={Logo} alt="Logo" width={64} height={64} />
       </div>
       <nav>
