@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import "./globals.css";
+import NavBar from "@/components/NavBar";
 
 export const metadata: Metadata = {
   title: "Harsat | Portfolio",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }
