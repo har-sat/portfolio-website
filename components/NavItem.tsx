@@ -12,7 +12,7 @@ export default function NavItem({ title, href }: NavProps) {
   let className = "hover:underline uppercase";
   const path = usePathname();
 
-  if (path.startsWith(href)) {
+  if (path === href) {
     className += " font-semibold underline";
   }
 
