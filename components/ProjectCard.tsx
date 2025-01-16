@@ -15,30 +15,32 @@ export default function ProjectCard({
     <a
       href={href}
       target="_blank"
-      className="hover:cursor-pointer inline-block"
+      className="hover:cursor-pointer flex transition-transform transform hover:scale-105 justify-center"
     >
-      <article className="text-text-50 bg-backgroundColor-900 m-4 p-9 w-full max-w-md">
-        <div className="pb-2">
-          <h1 className="font-black text-3xl mb-2 ">{title}</h1>
-          <p className="font-medium ">{description}</p>
+      <article className="bg-backgroundColor-900 text-text-50 shadow-lg rounded-lg overflow-hidden m-4 p-6 w-[300px] h-[420px] flex flex-col justify-between hover:shadow-xl">
+        <div>
+          <h1 className="font-extrabold text-xl mb-3 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
+            {title}
+          </h1>
+          <p className="font-medium text-sm text-text-50/80 mb-4 line-clamp-3">
+            {description}
+          </p>
         </div>
 
-        <ul>
-          {techStack.map((item) => (
+        <ul className="mt-auto space-y-2 max-h-[120px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600">
+          {techStack.map((item, index) => (
             <li
-              key={item.name}
-              className="font-mono pl-2 flex flex-row gap-2"
+              key={index}
+              className="font-mono flex items-center gap-3 text-sm text-text-50/90"
             >
-              <span>
-                <Image
-                className="iniline"
-                  src=".next/static/media/Logo.a0f790d0.svg"
-                  alt=""
-                  width={16}
-                  height={16}
-                />
-              </span>
-              <p>{item.name}</p>
+              <Image
+                src={item.image}
+                alt=""
+                width={20}
+                height={20}
+                className="inline"
+              />
+              <span>{item.name}</span>
             </li>
           ))}
         </ul>
