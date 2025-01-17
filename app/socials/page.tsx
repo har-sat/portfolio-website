@@ -1,11 +1,11 @@
 import { StaticImageData } from "next/image";
 import SocialPlatformCard from "@/components/SocialPlatformCard";
 import linkedInLogo from "@/public/linkedIn.svg";
-import gitHubLogo from "@/public/github.svg";
+import gitHubLogo from "@/public/gitHub.svg";
 import mailLogo from "@/public/mail.svg";
 
 const socialsList: { name: string; image: StaticImageData, href: string }[] = [
-  { name: "LinkedIn", image: linkedInLogo, href: "https://github.com/har-sat/" },
+  { name: "LinkedIn", image: linkedInLogo, href: "https://www.linkedin.com/in/harsat-p-754602305/" },
   { name: "GitHub", image: gitHubLogo, href: "https://github.com/har-sat/" },
   { name: "Email", image: mailLogo, href: "mailto:harsat.ponnusamy@gmail.com" },
 ];
