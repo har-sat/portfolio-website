@@ -15,7 +15,7 @@ export default function HomeContent() {
       className="flex flex-col gap-6 max-w-3xl items-center"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.2 }}
     >
       <h1 className="text-5xl sm:text-7xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 items-center">
         Hello! I&apos;m Harsat
