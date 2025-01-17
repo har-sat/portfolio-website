@@ -2,7 +2,7 @@ import HomeContent from "@/components/HomeContent";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gray-900 text-white px-4">
+    <main className="mt-20 flex flex-row min-h-screen justify-center ">
       <HomeContent />
     </main>
   );

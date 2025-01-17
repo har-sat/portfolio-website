@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "motion/react";
 
 type NavProps = {
   title: string;
@@ -9,16 +10,22 @@ type NavProps = {
 };
 
 export default function NavItem({ title, href }: NavProps) {
-  let className = "hover:underline uppercase";
   const path = usePathname();
-
-  if (path === href) {
-    className += " font-semibold underline";
-  }
+  const isSelected = path === href;
 
   return (
-    <Link href={href} className={className}>
+    <Link
+      href={href}
+      className="font-semibold uppercase hover:text-text-300 transition-colors duration-200"
+    >
       {title}
+      {isSelected && (
+        <motion.div
+          layoutId="page-indicator"
+          transition={{ duration: 0.2 }}
+          className="bg-text-50 w-full h-[1px]"
+        />
+      )}
     </Link>
   );
 }

@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
       </head>
-      <body className={`antialiased ${ibmPlexSans.className}`}>
+      <body className={`antialiased ${ibmPlexSans.className} overflow-hidden`}>
         <NavBar />
         {children}
       </body>
